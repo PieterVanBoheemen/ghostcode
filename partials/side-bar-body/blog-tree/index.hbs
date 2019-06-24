@@ -1,7 +1,7 @@
 <section class="blog-tree blur" id="J-blog-tree">
   <div class="loading">{{> "icons/loading"}}</div>
   <header class="light">
-    <div class="title">blogs</div>
+    <div class="title">Index</div>
   </header>
   <div class="blog-tree-tags J-blog-tree-tags">
     {{#get "tags" limit="all" order="name asc" }}
@@ -15,7 +15,7 @@
     <div class="untaged-posts J-untaged-posts"></div>
   </div>
   <div id="J-posts-all-hidden" class="hidden">
-    {{#get "posts" include="tags" order="published_at desc" limit="all" }}
+    {{#get "posts" include="tags" order="title asc" limit="all" }}
       {{#foreach posts}}
         <div class="J-post blog-tree-post" data-slug="{{slug}}">
           <a href="/{{slug}}/" class="J-go2post single-line blog-tree-post-title" data-id="{{id}}" title="{{title}}">
